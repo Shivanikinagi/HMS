@@ -1,0 +1,33 @@
+{% extends 'navbar.html' %}
+{%load static %}
+{% block body %}
+
+<div class="container">
+<h2 class="text-center">Admin Login</h2>
+<form method="post">
+{% csrf_token %}
+<label>Doctor Name</label>
+<input type = "text" class="form-control" name="name" required>
+<label>Contact</label>
+<input type = "text" class="form-control" name="mobile" required>
+    <label>Specialization</label>
+<input type = "text" class="form-control" name="special" required>
+<br>
+<input type = "submit" value="Submit" class="form-control btn btn-primary">
+</form>
+</div>
+
+
+ {% if error == "no" %}
+        <script>
+            alert('Record saved successful');
+            window.location = ('{% url "add_doctor" %}');
+        </script>
+{% endif %}
+{% if error == "yes" %}
+    <script>
+        alert('Something went wrong');
+    </script>
+{% endif %}
+
+{% endblock %}

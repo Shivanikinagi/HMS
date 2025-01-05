@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+{% extends 'navbar.html' %}
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <!-- Bootstrap CSS for layout and design -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/mystyle.css' %}">
+    <link href="https://kit.fontawesome.com/a076d05399.css" rel="stylesheet">  <!-- FontAwesome -->
+</head>
+<body>
+
+{% block body %}
+<div class="container" style="margin-top:50px">
+    <h2 class="text-center">Contact Us</h2>
+    <div class="row mt-5">
+        <!-- Contact Number -->
+        <div class="col-lg-3 col-sm-6 mydivstyle text-center">
+            <h4><i class="fas fa-phone-square"></i> Contact</h4>
+            <p class="mt-3 font-weight-bold">
+                <a href="tel:+918602768216">+91 8602768216</a>
+            </p>
+        </div>
+
+        <!-- Email -->
+        <div class="col-lg-3 col-sm-6 mydivstyle text-center">
+            <h4><i class="fas fa-envelope"></i> Mail</h4>
+            <p class="mt-3 font-weight-bold">
+                <a href="mailto:abc@gmail.com">abc@gmail.com</a>
+            </p>
+        </div>
+
+        <!-- Address -->
+        <div class="col-lg-3 col-sm-6 mydivstyle text-center">
+            <h4><i class="fas fa-address-card"></i> Address</h4>
+            <p class="mt-3 font-weight-bold">
+                <a href="https://maps.google.com/maps?q=Pune" target="_blank">Pune</a>
+            </p>
+        </div>
+
+        <!-- Working Hours -->
+        <div class="col-lg-3 col-sm-6 mydivstyle text-center">
+            <h4><i class="fas fa-clock"></i> Working Hours</h4>
+            <p class="mt-3 font-weight-bold">9:00 am to 7:00 pm</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+<!-- Bootstrap JS and FontAwesome for icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

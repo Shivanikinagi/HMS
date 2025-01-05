@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% extends 'navbar.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+{% block body %}
+
+ {% if error == "no" %}
+        <script>
+            alert('Login successful');
+            window.location = ('{% url "home" %}');
+        </script>
+{% endif %}
+{% if error == "yes" %}
+    <script>
+        alert('Invalid login credentials');
+    </script>
+{% endif %}
+
+<div class="container">
+<h2 class="text-center">Admin Login</h2>
+<form method="post">
+{% csrf_token %}
+<label>Admin Name</label>
+<input type = "text" class="form-control" name="uname">
+<label>Password</label>
+<input type = "password" class="form-control" name="pwd">
+<br>
+<input type = "submit" value="Login" class="form-control btn btn-primary">
+</form>
+</div>
+{% endblock %}
+</html>
