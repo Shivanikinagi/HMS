@@ -6,7 +6,6 @@ from django.contrib.auth import authenticate,login,logout
 from .models import *
 from hospital.views import *
 
-
 def About(request):
     return render(request,"about.html")
 
@@ -63,7 +62,7 @@ def add_doctor(request):
     except:
         error="yes"
     d={'error':error}
-    return render(request,"view_doctor.html",d)
+    return render(request,"add_doctor.html",d)
 
 def delete_doctor(request,pid):
     if not request.user.is_staff:
